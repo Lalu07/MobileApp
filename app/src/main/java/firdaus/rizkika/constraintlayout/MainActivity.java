@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        show();
+        validation();
+
     }
 
-    public void show(){
+    public void validation(){
         edtUSER = findViewById(R.id.editUser);
         editpass = findViewById(R.id.editPass);
         SIGNIN = findViewById(R.id.bttnMasuk);
@@ -32,10 +33,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Nama = edtUSER.getText().toString();
                 Password = editpass.getText().toString();
+                if(Nama.matches("") || Password.matches("")){
+                    Toast.makeText(getApplicationContext(),"Kolom tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                }
 
-                Toast T = Toast.makeText(getApplicationContext(), "Username anda :"+Nama+"Password anda :"+Password+"", Toast.LENGTH_LONG);
-                T.show();
+                else {
+                    Toast.makeText(getApplicationContext(), "Username anda :"+Nama+"Password anda :"+Password+"", Toast.LENGTH_LONG).show();
+                }
             }
         });
+
+
     }
 }
