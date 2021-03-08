@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         show();
+        test();
     }
 
     public void show(){
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 T.show();
             }
         });
+    }
+
+    public void test(){
+
     }
 
 
