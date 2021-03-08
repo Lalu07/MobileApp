@@ -33,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Nama = edtUSER.getText().toString();
                 Password = editpass.getText().toString();
-                if(Nama.matches("") || Password.matches("")){
-                    Toast.makeText(getApplicationContext(),"Kolom tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                if (Nama.isEmpty()){
+                    edtUSER.setError("Kolom ini harus diisi");
                 }
 
-                else {
-                    Toast.makeText(getApplicationContext(), "Username anda :"+Nama+"Password anda :"+Password+"", Toast.LENGTH_LONG).show();
+                else if (Password.isEmpty()){
+                    editpass.setError("Kolom ini harus diisi");
+                }
+
+                else{
+                    Toast.makeText(getApplicationContext(), "Username anda :"+Nama+"\n"+"Password anda :"+Password+"", Toast.LENGTH_LONG).show();
                 }
             }
         });
