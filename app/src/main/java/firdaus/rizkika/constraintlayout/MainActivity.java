@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         else if(!Patterns.EMAIL_ADDRESS.matcher(MAIL).matches()){
             Toast.makeText(MainActivity.this, "Email Salah",Toast.LENGTH_LONG).show();
         }
+        else if(!PASSWORD_PATTERN.matcher(Password).matches()){
+            Toast.makeText(MainActivity.this,"Password Salah",Toast.LENGTH_LONG).show();
+        }
         else {
             Toast.makeText(MainActivity.this,"Email dan Password Salah",Toast.LENGTH_LONG).show();
             return false;
