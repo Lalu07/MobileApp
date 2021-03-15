@@ -2,6 +2,7 @@ package firdaus.rizkika.constraintlayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     private boolean validasiEmail(EditText edtEML){
         MAIL= edtEML.getText().toString();
         Password = edtpass.getText().toString();
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             Toast.makeText(MainActivity.this,"Login berhasil",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this,masuk.class);
+            startActivity(intent);
             return true;
         }
         //End
