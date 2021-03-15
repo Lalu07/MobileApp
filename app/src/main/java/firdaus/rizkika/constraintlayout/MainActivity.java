@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         MAIL= edtEML.getText().toString();
         Password = edtpass.getText().toString();
 
-        if(Patterns.EMAIL_ADDRESS.matcher(MAIL).matches() && PASSWORD_PATTERN.matcher(Password).matches()){
-            Toast.makeText(MainActivity.this,"Login Berhasil",Toast.LENGTH_LONG).show();
+        if(!Patterns.EMAIL_ADDRESS.matcher(MAIL).matches() && PASSWORD_PATTERN.matcher(Password).matches()){
+            Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
             return true;
         }
         else if(!Patterns.EMAIL_ADDRESS.matcher(MAIL).matches()){
@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else {
-            Toast.makeText(MainActivity.this,"Email dan Password Salah",Toast.LENGTH_LONG).show();
-            return false;
+            Toast.makeText(MainActivity.this,"Login berhasil",Toast.LENGTH_LONG).show();
+            return true;
         }
         //End
     }
