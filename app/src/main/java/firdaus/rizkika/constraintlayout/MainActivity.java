@@ -39,18 +39,27 @@ public class MainActivity extends AppCompatActivity {
         SIGNIN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validasiEmail(edtEML);
+                validasi();
             }
         });
     }
 
 
-    private boolean validasiEmail(EditText edtEML){
+    private boolean validasi(){
         MAIL= edtEML.getText().toString();
         Password = edtpass.getText().toString();
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(MAIL).matches() && PASSWORD_PATTERN.matcher(Password).matches()){
-            Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
+        if(Patterns.EMAIL_ADDRESS.matcher(MAIL).matches() && PASSWORD_PATTERN.matcher(Password).matches()){
+            Toast.makeText(MainActivity.this,"Login Berhasil",Toast.LENGTH_LONG).show();
+            Bundle F = new Bundle();
+
+            F.putString("e",MAIL.trim());
+            F.putString("p",Password.trim());
+
+            Intent intent = new Intent(MainActivity.this,masuk.class);
+            intent.putExtras(F);
+
+            startActivity(intent);
             return true;
         }
         else if(!Patterns.EMAIL_ADDRESS.matcher(MAIL).matches()){
@@ -62,10 +71,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else {
-            Toast.makeText(MainActivity.this,"Login berhasil",Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(MainActivity.this,masuk.class);
-            startActivity(intent);
-            return true;
+            Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
+
+            return false;
         }
         //End
     }
