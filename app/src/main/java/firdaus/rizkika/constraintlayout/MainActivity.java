@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.mnDaftar){
-            Intent i = new Intent(MainActivity.this,Pendaftaran.class);
+            Intent i = new Intent(getApplicationContext(),Pendaftaran.class);
             startActivity(i);
         }
 
