@@ -2,4 +2,11 @@
     <string name="app_name">Constraint Layout</string>
     <string name="editEmail">Email</string>
     <string name="pass">Password</string>
+    <string name="menDaftar">Pendaftaran</string>
+    <string name="InfoDaftar">Daftar</string>
+    <string name="mskNama">Masukan Nama</string>
+    <string name="mskEmail">Masukkan Email</string>
+    <string name="mskPassword">Masukkan Password</string>
+    <string name="rePassword">Masukkan Password</string>
+    <string name="mskAlamat">Masukkan Alamat</string>
 </resources>
