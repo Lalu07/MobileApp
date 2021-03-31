@@ -15,8 +15,8 @@ public class LihatData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_data);
 
-        newNama.findViewById(R.id.tvNamaKontak);
-        newNomor.findViewById(R.id.tvNotel);
+        newNama = findViewById(R.id.tvNamaKontak);
+        newNomor = findViewById(R.id.tvNotel);
 
         Bundle bundle = getIntent().getExtras();
         String nama = bundle.getString("a");
