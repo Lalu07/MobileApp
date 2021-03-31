@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConstraintLayout">
-        <activity android:name=".Pendaftaran" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".LihatData"
+            android:parentActivityName=".Home"></activity>
+        <activity android:name=".Home"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Pendaftaran"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".masuk"
             android:parentActivityName=".MainActivity" />

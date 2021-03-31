@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
             F.putString("e",MAIL.trim());
             F.putString("p",Password.trim());
 
-            Intent intent = new Intent(MainActivity.this,masuk.class);
+//            Intent intent = new Intent(MainActivity.this,masuk.class);
+            Intent intent = new Intent(getApplicationContext(),Home.class);
             intent.putExtras(F);
 
             startActivity(intent);
